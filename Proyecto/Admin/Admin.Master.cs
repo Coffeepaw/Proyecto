@@ -11,7 +11,13 @@ namespace Proyecto.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["name"] != null)
+            {
+            }
+            else
+            {
+                Response.Redirect("http://localhost:60542/", true);
+            }
         }
     }
 }
