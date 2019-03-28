@@ -126,7 +126,9 @@
     <Content Include="Alumno\VerActividades.aspx" />
     <Content Include="AMaestro\Actividades.aspx" />
     <Content Include="AMaestro\CrearActividad.aspx" />
+    <Content Include="AMaestro\CrearPublicacion.aspx" />
     <Content Include="AMaestro\Mindex.aspx" />
+    <Content Include="AMaestro\Publicaciones.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -269,6 +271,13 @@
     <Compile Include="AMaestro\CrearActividad.aspx.designer.cs">
       <DependentUpon>CrearActividad.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AMaestro\CrearPublicacion.aspx.cs">
+      <DependentUpon>CrearPublicacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AMaestro\CrearPublicacion.aspx.designer.cs">
+      <DependentUpon>CrearPublicacion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AMaestro\Maestro.Master.cs">
       <DependentUpon>Maestro.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -282,6 +291,13 @@
     </Compile>
     <Compile Include="AMaestro\Mindex.aspx.designer.cs">
       <DependentUpon>Mindex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AMaestro\Publicaciones.aspx.cs">
+      <DependentUpon>Publicaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AMaestro\Publicaciones.aspx.designer.cs">
+      <DependentUpon>Publicaciones.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
