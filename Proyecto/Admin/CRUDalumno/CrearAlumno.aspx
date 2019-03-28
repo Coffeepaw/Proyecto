@@ -48,13 +48,13 @@
             </td>
         </tr>
         <tr>
-            <t>Password</t>
+            <td>Password</td>
             <td>
                 <asp:TextBox ID="tb_password" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
-            <td>Partida De Nacimineto</td>
+            <td>Partida De Nacimiento</td>
             <td>
                 <asp:TextBox ID="tb_partida" runat="server"></asp:TextBox>
             </td>
