@@ -9,11 +9,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Proyecto.Admin
+namespace Proyecto.Admin.CRUDmaestro
 {
-    public partial class Maestro : System.Web.UI.Page
+    public partial class EliminarMaestro : System.Web.UI.Page
     {
-        public static List<MaestroO> maestros;
+        public static List<Maestro> maestros;
         public static String Maestro_escogido = "";
 
         protected void Page_Load(object sender, EventArgs e)
@@ -47,9 +47,9 @@ namespace Proyecto.Admin
                 string strsb = readStream.ReadToEnd();
                 System.Diagnostics.Debug.WriteLine("Response stream received.");
                 System.Diagnostics.Debug.WriteLine(strsb);
-                var model = JsonConvert.DeserializeObject<List<MaestroO>>(strsb);
-                maestros = new List<MaestroO>();
-                foreach (MaestroO act in model)
+                var model = JsonConvert.DeserializeObject<List<Maestro>>(strsb);
+                maestros = new List<Maestro>();
+                foreach (Maestro act in model)
                 {
 
                     maestros.Add(act);
@@ -57,22 +57,32 @@ namespace Proyecto.Admin
                 }
                 response.Close();
                 readStream.Close();
-
+                Lista_Maestro.DataSource = maestros;
+                Lista_Maestro.DataTextField = "Nombres";
+                Lista_Maestro.DataValueField = "Id_maestro";
+                Lista_Maestro.DataBind();
             }
-        }
-
-        protected void bt_create_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("http://localhost:60542/Admin/CRUDmaestro/CrearMaestro.aspx");
         }
 
         protected void Eliminar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("http://localhost:60542/Admin/CRUDmaestro/EliminarMaestro.aspx");
-        }
-<<<<<<< HEAD
+            String serviceurl = string.Format("http://bd1-p1.azurewebsites.net/api/Maestro/{0}",Lista_Maestro.SelectedItem.Value);
 
-        public class MaestroO
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(serviceurl);
+            request.Method = "DELETE";
+
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+            Stream receiveStream = response.GetResponseStream();
+            StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
+            string strsb = readStream.ReadToEnd();
+            System.Diagnostics.Debug.WriteLine(strsb);
+
+        }
+
+        
+
+        public class Maestro
         {
             public string Nombres { get; set; }
             public string Telefono { get; set; }
@@ -86,8 +96,5 @@ namespace Proyecto.Admin
             public string Admin { get; set; }
             public int Id_maestro { get; set; }
         }
-
-=======
->>>>>>> master
     }
 }

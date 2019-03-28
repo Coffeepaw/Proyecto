@@ -1,10 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="Maestro.aspx.cs" Inherits="Proyecto.Admin.Maestro" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="EliminarMaestro.aspx.cs" Inherits="Proyecto.Admin.CRUDmaestro.EliminarMaestro" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <p>
-    <br />
-</p>
-<p>
-    <table class="nav-justified" align="center" border="1">
+        <br />
+    </p>
+    <h1>ELIMINAR MAESTRO</h1>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+    <p>
+        <table class="nav-justified" align="center" border="1">
         <tr>
             <td><strong>Id</strong></td>
             <td><strong>Nombres</strong></td>
@@ -30,28 +35,20 @@
         </tr>
         <% } %>
     </table>
-</p>
-<p>
-</p>
+
+    </p>
     <table class="nav-justified">
         <tr>
+            <td>QUE MAESTRO DESEA ELIMINAR?</td>
             <td>
-                <asp:Button ID="bt_create" runat="server" OnClick="bt_create_Click" Text="Crear Maestro" />
+                <asp:DropDownList ID="Lista_Maestro" runat="server">
+                </asp:DropDownList>
             </td>
         </tr>
         <tr>
+            <td>&nbsp;</td>
             <td>
-                <asp:Button ID="Eliminar" runat="server" Text="Eliminar Maestro" OnClick="Eliminar_Click" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <asp:Button ID="Button3" runat="server" Text="Button" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <asp:Button ID="Button4" runat="server" Text="Button" />
+                <asp:Button ID="Eliminar" runat="server" OnClick="Eliminar_Click" Text="Eliminar Maestro" />
             </td>
         </tr>
     </table>

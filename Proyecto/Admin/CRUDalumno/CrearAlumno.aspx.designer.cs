@@ -13,22 +13,22 @@ namespace Proyecto.Admin.CRUDalumno {
     public partial class CrearAlumno {
         
         /// <summary>
-        /// tb_nombres control.
+        /// tb_nombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_nombres;
+        protected global::System.Web.UI.WebControls.TextBox tb_nombre;
         
         /// <summary>
-        /// tb_apellidos control.
+        /// tb_apellido control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_apellidos;
+        protected global::System.Web.UI.WebControls.TextBox tb_apellido;
         
         /// <summary>
         /// tb_telefono control.
@@ -40,13 +40,13 @@ namespace Proyecto.Admin.CRUDalumno {
         protected global::System.Web.UI.WebControls.TextBox tb_telefono;
         
         /// <summary>
-        /// tb_telefonotutor control.
+        /// tb_tutor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_telefonotutor;
+        protected global::System.Web.UI.WebControls.TextBox tb_tutor;
         
         /// <summary>
         /// tb_direccion control.
@@ -58,13 +58,13 @@ namespace Proyecto.Admin.CRUDalumno {
         protected global::System.Web.UI.WebControls.TextBox tb_direccion;
         
         /// <summary>
-        /// tb_mail control.
+        /// tb_correo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_mail;
+        protected global::System.Web.UI.WebControls.TextBox tb_correo;
         
         /// <summary>
         /// tb_fechanac control.
@@ -76,24 +76,6 @@ namespace Proyecto.Admin.CRUDalumno {
         protected global::System.Web.UI.WebControls.TextBox tb_fechanac;
         
         /// <summary>
-        /// tb_partidanac control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_partidanac;
-        
-        /// <summary>
-        /// tb_foto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_foto;
-        
-        /// <summary>
         /// tb_password control.
         /// </summary>
         /// <remarks>
@@ -101,6 +83,24 @@ namespace Proyecto.Admin.CRUDalumno {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tb_password;
+        
+        /// <summary>
+        /// tb_partida control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_partida;
+        
+        /// <summary>
+        /// tb_carnet control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_carnet;
         
         /// <summary>
         /// crear control.
