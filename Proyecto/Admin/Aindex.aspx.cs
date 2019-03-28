@@ -17,7 +17,7 @@ namespace Proyecto.Admin
             }
             else
             {
-                Response.Redirect("http://localhost:60542/Default.aspx", true);
+                Response.Redirect("http://localhost:60542/", true);
             }
         }
     }
