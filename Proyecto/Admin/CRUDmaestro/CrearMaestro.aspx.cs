@@ -11,7 +11,7 @@ namespace Proyecto.Admin.CRUDmaestro
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void crear_Click(object sender, EventArgs e)
@@ -21,6 +21,8 @@ namespace Proyecto.Admin.CRUDmaestro
 
         private void Crear_Maestro(String nombres, String telefono, String direccion, String correo, String fecha_nac, String password, String dpi, String ciclo)
         {
+
+
 
         }
     }
