@@ -117,6 +117,9 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Admin\Aindex.aspx" />
+    <Content Include="Admin\Alumno.aspx" />
+    <Content Include="Admin\CRUDmaestro\CrearMaestro.aspx" />
+    <Content Include="Admin\Maestro.aspx" />
     <Content Include="Alumno\Alindex.aspx" />
     <Content Include="Alumno\VerActividades.aspx" />
     <Content Include="AMaestro\Actividades.aspx" />
@@ -193,6 +196,27 @@
     </Compile>
     <Compile Include="Admin\Aindex.aspx.designer.cs">
       <DependentUpon>Aindex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Alumno.aspx.cs">
+      <DependentUpon>Alumno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Alumno.aspx.designer.cs">
+      <DependentUpon>Alumno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CRUDmaestro\CrearMaestro.aspx.cs">
+      <DependentUpon>CrearMaestro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CRUDmaestro\CrearMaestro.aspx.designer.cs">
+      <DependentUpon>CrearMaestro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Maestro.aspx.cs">
+      <DependentUpon>Maestro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Maestro.aspx.designer.cs">
+      <DependentUpon>Maestro.aspx</DependentUpon>
     </Compile>
     <Compile Include="Alumno\Alindex.aspx.cs">
       <DependentUpon>Alindex.aspx</DependentUpon>
@@ -300,6 +324,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Admin\CRUDalumno\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>

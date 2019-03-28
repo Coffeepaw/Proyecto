@@ -13,5 +13,10 @@ namespace Proyecto.Admin
         {
 
         }
+
+        protected void bt_create_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("http://localhost:60542/Admin/CRUDmaestro/CrearMaestro.aspx");
+        }
     }
 }
