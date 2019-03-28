@@ -16,7 +16,10 @@ namespace Proyecto.Admin
 
         protected void bt_create_Click(object sender, EventArgs e)
         {
+
+            // REDIRECCIONAR A LA PAGINA DE CREAR ALUMNO
             Response.Redirect("http://localhost:60542/Admin/CRUDalumno/CrearAlumno.aspx");
+
         }
     }
 }
