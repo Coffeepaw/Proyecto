@@ -70,6 +70,7 @@ namespace Proyecto.Admin
         {
             Response.Redirect("http://localhost:60542/Admin/CRUDmaestro/EliminarMaestro.aspx");
         }
+<<<<<<< HEAD
 
         public class MaestroO
         {
@@ -86,5 +87,7 @@ namespace Proyecto.Admin
             public int Id_maestro { get; set; }
         }
 
+=======
+>>>>>>> master
     }
 }
