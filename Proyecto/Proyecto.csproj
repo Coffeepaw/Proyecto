@@ -118,6 +118,7 @@
     <Content Include="About.aspx" />
     <Content Include="Admin\Aindex.aspx" />
     <Content Include="Admin\Alumno.aspx" />
+    <Content Include="Admin\CRUDalumno\CrearAlumno.aspx" />
     <Content Include="Admin\CRUDmaestro\CrearMaestro.aspx" />
     <Content Include="Admin\Maestro.aspx" />
     <Content Include="Alumno\Alindex.aspx" />
@@ -203,6 +204,13 @@
     </Compile>
     <Compile Include="Admin\Alumno.aspx.designer.cs">
       <DependentUpon>Alumno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CRUDalumno\CrearAlumno.aspx.cs">
+      <DependentUpon>CrearAlumno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CRUDalumno\CrearAlumno.aspx.designer.cs">
+      <DependentUpon>CrearAlumno.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\CRUDmaestro\CrearMaestro.aspx.cs">
       <DependentUpon>CrearMaestro.aspx</DependentUpon>
@@ -324,7 +332,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\CRUDalumno\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
