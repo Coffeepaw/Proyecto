@@ -10,7 +10,7 @@
     <table class="nav-justified">
         <tr>
             <td>
-                <asp:Button ID="bt_create" runat="server" Text="Crear Alumno" />
+                <asp:Button ID="bt_create" runat="server" Text="Crear Alumno" OnClick="bt_create_Click" />
             </td>
         </tr>
         <tr>
