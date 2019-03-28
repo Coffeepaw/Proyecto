@@ -56,13 +56,13 @@
         <tr>
             <td>Ciclo</td>
             <td>
-                <asp:TextBox ID="tb_ciclo" runat="server"></asp:TextBox>
+                <asp:TextBox ID="tb_ciclo" runat="server" Height="16px"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td>
-                <asp:Button ID="crear" runat="server" Text="Crear Maestro" />
+                <asp:Button ID="crear" runat="server" Text="Crear Maestro" OnClick="crear_Click" />
             </td>
         </tr>
     </table>
