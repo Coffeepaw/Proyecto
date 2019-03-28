@@ -37,7 +37,7 @@ namespace Proyecto.Admin.CRUDmaestro
                 Dpi = dpi,
                 Ciclo = ciclo,
                 Admin = Session["name"].ToString(),
-                Id_maestro = ""
+                Id_maestro = 0
             };
 
             HttpWebRequest request = WebRequest.Create(serviceurl) as HttpWebRequest;
@@ -77,7 +77,7 @@ namespace Proyecto.Admin.CRUDmaestro
             public string Foto { get; set; }
             public string Ciclo { get; set; }
             public string Admin { get; set; }
-            public string Id_maestro { get; set; }
+            public int Id_maestro { get; set; }
         }
     }
 }
