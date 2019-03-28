@@ -120,6 +120,7 @@
     <Content Include="Admin\Alumno.aspx" />
     <Content Include="Admin\CRUDalumno\CrearAlumno.aspx" />
     <Content Include="Admin\CRUDmaestro\CrearMaestro.aspx" />
+    <Content Include="Admin\CRUDmaestro\EliminarMaestro.aspx" />
     <Content Include="Admin\Maestro.aspx" />
     <Content Include="Alumno\Alindex.aspx" />
     <Content Include="Alumno\VerActividades.aspx" />
@@ -218,6 +219,13 @@
     </Compile>
     <Compile Include="Admin\CRUDmaestro\CrearMaestro.aspx.designer.cs">
       <DependentUpon>CrearMaestro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CRUDmaestro\EliminarMaestro.aspx.cs">
+      <DependentUpon>EliminarMaestro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CRUDmaestro\EliminarMaestro.aspx.designer.cs">
+      <DependentUpon>EliminarMaestro.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Maestro.aspx.cs">
       <DependentUpon>Maestro.aspx</DependentUpon>

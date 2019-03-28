@@ -18,5 +18,10 @@ namespace Proyecto.Admin
         {
             Response.Redirect("http://localhost:60542/Admin/CRUDmaestro/CrearMaestro.aspx");
         }
+
+        protected void Eliminar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("http://localhost:60542/Admin/CRUDmaestro/EliminarMaestro.aspx");
+        }
     }
 }

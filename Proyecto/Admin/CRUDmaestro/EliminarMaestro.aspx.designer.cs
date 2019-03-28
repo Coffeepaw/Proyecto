@@ -7,19 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Proyecto.Admin {
+namespace Proyecto.Admin.CRUDmaestro {
     
     
-    public partial class Maestro {
+    public partial class EliminarMaestro {
         
         /// <summary>
-        /// bt_create control.
+        /// Lista_Maestro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button bt_create;
+        protected global::System.Web.UI.WebControls.DropDownList Lista_Maestro;
         
         /// <summary>
         /// Eliminar control.
@@ -29,23 +29,5 @@ namespace Proyecto.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Eliminar;
-        
-        /// <summary>
-        /// Button3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
-        
-        /// <summary>
-        /// Button4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button4;
     }
 }
