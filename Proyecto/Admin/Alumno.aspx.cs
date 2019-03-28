@@ -13,5 +13,11 @@ namespace Proyecto.Admin
         {
 
         }
+
+        protected void bt_create_Click(object sender, EventArgs e)
+        {
+            // comentario ---
+            //prueba test
+        }
     }
 }
