@@ -8,15 +8,14 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
 namespace Proyecto.AMaestro
 {
-    public partial class Publicaciones : System.Web.UI.Page
+    public partial class BorrarPublicacion : System.Web.UI.Page
     {
-
         public static List<Publicacion> publicaciones;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
             if (!IsPostBack)
             {
                 if (Session["name"] != null)
@@ -44,7 +43,7 @@ namespace Proyecto.AMaestro
 
 
                 string strsb = readStream.ReadToEnd();
-                
+
                 System.Diagnostics.Debug.WriteLine(strsb);
                 var model = JsonConvert.DeserializeObject<List<Publicacion>>(strsb);
                 publicaciones = new List<Publicacion>();
@@ -56,32 +55,32 @@ namespace Proyecto.AMaestro
                 }
                 response.Close();
                 readStream.Close();
-
+                Lista_publicacion.DataSource = publicaciones;
+                Lista_publicacion.DataTextField = "Titulo";
+                Lista_publicacion.DataValueField = "Id_publicacion";
+                Lista_publicacion.DataBind();
             }
         }
 
-        protected void CrearMensaje_Click(object sender, EventArgs e)
+        protected void Borrar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("http://localhost:60542/AMaestro/CrearPublicacion.aspx");
+            String serviceurl = string.Format("http://bd1-p1.azurewebsites.net/api/Publicacion/{0}", Lista_publicacion.SelectedItem.Value);
+
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(serviceurl);
+            request.Method = "DELETE";
+
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+            Stream receiveStream = response.GetResponseStream();
+            StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
+            string strsb = readStream.ReadToEnd();
+            System.Diagnostics.Debug.WriteLine(strsb);
+            Response.Redirect("http://localhost:60542/AMaestro/Publicaciones.aspx");
         }
 
-        protected void bt_borrar_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("http://localhost:60542/AMaestro/BorrarPublicacion.aspx");
-        }
+
     }
 
-    public class Publicacion
-    {
-        public string Titulo { get; set; }
-        public string Descripcion { get; set; }
-        public string Fecha { get; set; }
-        public int Id_maestro { get; set; }
-        public int Id_calificacion { get; set; }
-        public int Id_examen { get; set; }
-        public int Id_actividad { get; set; }
-        public int Id_material { get; set; }
-        public int Id_tipo { get; set; }
-        public int Id_publicacion { get; set; }
-    }
+
+
 }

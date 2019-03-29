@@ -34,7 +34,7 @@ namespace Proyecto.AMaestro
                 lista.Add(elemento);
             }
 
-            CActividadJson actividadJSON = new CActividadJson
+            Actividad actividadJSON = new Actividad
             {
                 Titulo = titulo,
                 Descripcion = descripcion,
@@ -69,11 +69,11 @@ namespace Proyecto.AMaestro
                 string strsb = sr.ReadToEnd();
                 System.Diagnostics.Debug.WriteLine(strsb);
 
-                Response.Redirect("http://localhost:60542/AMeestro/Mindex.aspx");
+                Response.Redirect("http://localhost:60542/AMaestro/Actividades.aspx");
             }
         }
 
-        public class CActividadJson
+        public class Actividad
         {
             public string Titulo { get; set; }
             public string Descripcion { get; set; }

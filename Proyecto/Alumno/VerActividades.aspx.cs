@@ -73,17 +73,19 @@ namespace Proyecto.Alumno
         {
             System.Diagnostics.Debug.WriteLine(id);
         }
+
+        public class Actividad
+        {
+            public string Titulo { get; set; }
+            public string Descripcion { get; set; }
+            public string Observacion { get; set; }
+            public string Estado { get; set; }
+            public string Nombre { get; set; }
+            public int Id_actividad { get; set; }
+            public double Ponderacion { get; set; }
+            public double Nota { get; set; }
+        }
     }
 
-    public class Actividad
-    {
-        public string Titulo { get; set; }
-        public string Descripcion { get; set; }
-        public string Observacion { get; set; }
-        public string Estado { get; set; }
-        public string Nombre { get; set; }
-        public int Id_actividad { get; set; }
-        public double Ponderacion { get; set; }
-        public double Nota { get; set; }
-    }
+    
 }

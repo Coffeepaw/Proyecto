@@ -10,24 +10,24 @@
 namespace Proyecto.AMaestro {
     
     
-    public partial class Actividades {
+    public partial class BorrarPublicacion {
         
         /// <summary>
-        /// Btn_crearactividad control.
+        /// Lista_publicacion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btn_crearactividad;
+        protected global::System.Web.UI.WebControls.DropDownList Lista_publicacion;
         
         /// <summary>
-        /// bt_eliminar control.
+        /// Borrar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button bt_eliminar;
+        protected global::System.Web.UI.WebControls.Button Borrar;
     }
 }

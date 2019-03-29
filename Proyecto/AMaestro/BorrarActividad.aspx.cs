@@ -9,13 +9,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 namespace Proyecto.AMaestro
 {
-    public partial class Actividades : System.Web.UI.Page
+    public partial class BorrarActividad : System.Web.UI.Page
     {
 
         public static List<Actividad> actividades = new List<Actividad>();
-        public static String Act_escogida = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -46,7 +46,7 @@ namespace Proyecto.AMaestro
 
 
                 string strsb = readStream.ReadToEnd();
-
+                System.Diagnostics.Debug.WriteLine(strsb);
                 var model = JsonConvert.DeserializeObject<List<Actividad>>(strsb);
                 actividades = new List<Actividad>();
                 foreach (Actividad act in model)
@@ -58,31 +58,28 @@ namespace Proyecto.AMaestro
                 response.Close();
                 readStream.Close();
 
+                Lista_actividades.DataSource = actividades;
+                Lista_actividades.DataTextField = "Titulo";
+                Lista_actividades.DataValueField = "Id_actividad";
+                Lista_actividades.DataBind();
             }
         }
 
-        protected void Btn_crearactividad_Click(object sender, EventArgs e)
+        protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("http://localhost:60542/AMaestro/CrearActividad.aspx");
-        }
+            System.Diagnostics.Debug.WriteLine(Lista_actividades.SelectedItem.Value);
+            String serviceurl = string.Format("http://bd1-p1.azurewebsites.net/api/Actividad/{0}", Lista_actividades.SelectedItem.Value);
 
-        protected void bt_eliminar_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("http://localhost:60542/AMaestro/BorrarActividad.aspx");
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(serviceurl);
+            request.Method = "DELETE";
+
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+            Stream receiveStream = response.GetResponseStream();
+            StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
+            string strsb = readStream.ReadToEnd();
+            System.Diagnostics.Debug.WriteLine(strsb);
+            Response.Redirect("http://localhost:60542/AMaestro/Actividades.aspx");
         }
     }
-
-    public class Actividad
-    {
-        public string Titulo { get; set; }
-        public string Descripcion { get; set; }
-        public string Fecha_publicacion { get; set; }
-        public string Fecha_entrega { get; set; }
-        public double Ponderacion { get; set; }
-        public int Id_maestro { get; set; }
-        public int Id_materia { get; set; }
-        public int Id_actividad { get; set; }
-        public object Lst_asignados { get; set; }
-    }
-
 }

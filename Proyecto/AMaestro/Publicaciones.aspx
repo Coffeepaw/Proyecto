@@ -13,13 +13,13 @@
             <td>Fecha</td>
             <td>Tipo</td>
         </tr>
-        <% foreach(var act in publicaciones) { %>
+        <% foreach(var act in publicaciones){ %>
         <tr>
-            <td><%= act.Id_publicacion %></td>
-            <td><%= act.Titulo %></td>
-            <td><%= act.Descripcion %></td>
-            <td><%= act.Fecha %></td>
-            <td><%= act.Id_tipo %></td>
+           <td><%= act.Id_publicacion %></td>
+           <td><%= act.Titulo %></td>
+           <td><%= act.Descripcion %></td>
+           <td><%= act.Fecha %></td>
+           <td><%= act.Id_tipo %></td>
         </tr>
         <% } %>
     </table>
@@ -34,7 +34,9 @@
             </td>
         </tr>
         <tr>
-            <td>&nbsp;</td>
+            <td>
+                <asp:Button ID="bt_borrar" runat="server" OnClick="bt_borrar_Click" Text="Borrar Publicacion" />
+            </td>
         </tr>
         <tr>
             <td>&nbsp;</td>
