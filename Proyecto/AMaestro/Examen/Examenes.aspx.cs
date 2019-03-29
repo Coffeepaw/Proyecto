@@ -9,12 +9,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Proyecto.AMaestro.Material
+namespace Proyecto.AMaestro.Examen
 {
-    public partial class Materiales : System.Web.UI.Page
+    public partial class Examenes : System.Web.UI.Page
     {
-
-        public static List<Material> materiales = new List<Material>();
+        public static List<Examen> examenes = new List<Examen>();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -29,7 +28,7 @@ namespace Proyecto.AMaestro.Material
                     Response.Redirect("http://localhost:60542/", true);
                 }
 
-                String serviceurl = string.Format("http://bd1-p1.azurewebsites.net/api/Material/{0}", Session["name"].ToString());
+                String serviceurl = string.Format("http://bd1-p1.azurewebsites.net/api/ExamenMaestro/{0}", Session["name"].ToString());
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(serviceurl);
 
                 // Set some reasonable limits on resources used by this request
@@ -45,52 +44,53 @@ namespace Proyecto.AMaestro.Material
 
 
                 string strsb = readStream.ReadToEnd();
-
-                var model = JsonConvert.DeserializeObject<List<Material>>(strsb);
-                materiales = new List<Material>();
-                foreach (Material act in model)
+                System.Diagnostics.Debug.WriteLine(strsb);
+                var model = JsonConvert.DeserializeObject<List<Examen>>(strsb);
+                examenes = new List<Examen>();
+                foreach (Examen act in model)
                 {
 
-                    materiales.Add(act);
+                    examenes.Add(act);
 
                 }
                 response.Close();
                 readStream.Close();
-                lista_material.DataSource = materiales;
-                lista_material.DataTextField = "Titulo";
-                lista_material.DataValueField = "Id_material";
-                lista_material.DataBind();
+
+                lista_examen.DataSource = examenes;
+                lista_examen.DataTextField = "Titulo";
+                lista_examen.DataValueField = "Id_examen";
+                lista_examen.DataBind();
+
             }
         }
 
-        protected void Programar_Click(object sender, EventArgs e)
+        protected void Crear_Click(object sender, EventArgs e)
         {
-            Response.Redirect("http://localhost:60542/AMaestro/Material/CrearMaterial.aspx");
+            Response.Redirect("http://localhost:60542/AMaestro/Examen/CrearExamen.aspx");
         }
 
         protected void Borrar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("http://localhost:60542/AMaestro/Material/BorrarMaterial.aspx");
-        }
-
-        protected void Descargar_Click1(object sender, EventArgs e)
-        {
-
             
-
-
-            Response.Redirect("http://localhost:60542/AMaestro/Material/Materiales.aspx");
         }
 
-        public class Material
+        protected void Preguntas_Click(object sender, EventArgs e)
         {
-            public string Titulo { get; set; }
-            public string Fecha { get; set; }
-            public string Enlace { get; set; }
-            public string Descripcion { get; set; }
+            Session["examen"] = lista_examen.SelectedItem.Value;
+            Response.Redirect("http://localhost:60542/AMaestro/Examen/CrearExamen.aspx");
+        }
+
+        public class Examen
+        {
+            public int Id_examen { get; set; }
+            public string Fecha_publicacion { get; set; }
+            public string Hora_inicio { get; set; }
+            public string Hora_fin { get; set; }
             public int Id_maestro { get; set; }
             public int Id_materia { get; set; }
-            public int Id_material { get; set; }
+            public string Titulo { get; set; }
+            public string Descripcion { get; set; }
+            public List<int> Lst_asignados { get; set; }
         }
     }
 }

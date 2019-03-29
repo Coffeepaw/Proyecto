@@ -1,11 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AMaestro/Maestro.Master" AutoEventWireup="true" CodeBehind="Materiales.aspx.cs" Inherits="Proyecto.AMaestro.Material.Materiales" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AMaestro/Maestro.Master" AutoEventWireup="true" CodeBehind="BorrarMaterial.aspx.cs" Inherits="Proyecto.AMaestro.Material.BorrarMaterial" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <h1>BORRAR MATERIAL</h1>
     <p>
-        &nbsp;</p>
-    <h1>
-        MATERIAL DE APOYOS<br />
-</h1>
-<p>
 </p>
     <table class="nav-justified">
         <tr>
@@ -27,23 +23,11 @@
     </table>
 <p>
 </p>
-    <table class="nav-justified">
-        <tr>
-            <td>
-                <asp:Button ID="Programar" runat="server" OnClick="Programar_Click" Text="Programar Material" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <asp:Button ID="Borrar" runat="server" OnClick="Borrar_Click" Text="Borrar Material" />
-            </td>
-        </tr>
-        <tr>
-            <td>
+
                 <table class="nav-justified">
                     <tr>
                         <td>
-                            <h3>Descargar Material</h3>
+                            <h3>Borrar Material</h3>
                         </td>
                         <td>&nbsp;</td>
                     </tr>
@@ -57,11 +41,8 @@
                     <tr>
                         <td>&nbsp;</td>
                         <td>
-                            <asp:Button ID="Descargar" runat="server" OnClick="Descargar_Click1" Text="Descargar" />
+                            <asp:Button ID="bt_borrar" runat="server" OnClick="Descargar_Click1" Text="Borrar Material" />
                         </td>
                     </tr>
                 </table>
-            </td>
-        </tr>
-    </table>
 </asp:Content>

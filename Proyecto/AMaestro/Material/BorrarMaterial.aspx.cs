@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 
 namespace Proyecto.AMaestro.Material
 {
-    public partial class Materiales : System.Web.UI.Page
+    public partial class BorrarMaterial : System.Web.UI.Page
     {
 
         public static List<Material> materiales = new List<Material>();
@@ -63,25 +63,22 @@ namespace Proyecto.AMaestro.Material
             }
         }
 
-        protected void Programar_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("http://localhost:60542/AMaestro/Material/CrearMaterial.aspx");
-        }
-
-        protected void Borrar_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("http://localhost:60542/AMaestro/Material/BorrarMaterial.aspx");
-        }
-
         protected void Descargar_Click1(object sender, EventArgs e)
         {
+            System.Diagnostics.Debug.WriteLine(lista_material.SelectedItem.Value);
+            String serviceurl = string.Format("http://bd1-p1.azurewebsites.net/api/Material/{0}", lista_material.SelectedItem.Value);
 
-            
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(serviceurl);
+            request.Method = "DELETE";
 
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 
+            Stream receiveStream = response.GetResponseStream();
+            StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
+            string strsb = readStream.ReadToEnd();
+            System.Diagnostics.Debug.WriteLine(strsb);
             Response.Redirect("http://localhost:60542/AMaestro/Material/Materiales.aspx");
         }
-
         public class Material
         {
             public string Titulo { get; set; }

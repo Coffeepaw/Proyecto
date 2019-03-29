@@ -10,42 +10,51 @@
 namespace Proyecto.AMaestro.Material {
     
     
-    public partial class Materiales {
+    public partial class CrearMaterial {
         
         /// <summary>
-        /// Programar control.
+        /// tb_titulo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Programar;
+        protected global::System.Web.UI.WebControls.TextBox tb_titulo;
         
         /// <summary>
-        /// Borrar control.
+        /// tb_enlace control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Borrar;
+        protected global::System.Web.UI.WebControls.TextBox tb_enlace;
         
         /// <summary>
-        /// lista_material control.
+        /// tb_descripcion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList lista_material;
+        protected global::System.Web.UI.WebControls.TextBox tb_descripcion;
         
         /// <summary>
-        /// Descargar control.
+        /// tb_materia control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Descargar;
+        protected global::System.Web.UI.WebControls.TextBox tb_materia;
+        
+        /// <summary>
+        /// Crear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Crear;
     }
 }

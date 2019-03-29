@@ -7,19 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Proyecto.AMaestro.Material {
+namespace Proyecto.AMaestro.Examen {
     
     
-    public partial class Materiales {
+    public partial class Examenes {
         
         /// <summary>
-        /// Programar control.
+        /// Crear control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Programar;
+        protected global::System.Web.UI.WebControls.Button Crear;
         
         /// <summary>
         /// Borrar control.
@@ -31,21 +31,21 @@ namespace Proyecto.AMaestro.Material {
         protected global::System.Web.UI.WebControls.Button Borrar;
         
         /// <summary>
-        /// lista_material control.
+        /// lista_examen control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList lista_material;
+        protected global::System.Web.UI.WebControls.DropDownList lista_examen;
         
         /// <summary>
-        /// Descargar control.
+        /// Preguntas control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Descargar;
+        protected global::System.Web.UI.WebControls.Button Preguntas;
     }
 }

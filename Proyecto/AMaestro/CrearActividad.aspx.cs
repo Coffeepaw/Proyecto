@@ -15,7 +15,11 @@ namespace Proyecto.AMaestro
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            tb_entrega.Text = DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss tt");
+            if (!IsPostBack)
+            {
+                tb_entrega.Text = DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss tt");
+
+            }
         }
 
         protected void bt_crear_Click(object sender, EventArgs e)

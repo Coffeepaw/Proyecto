@@ -10,25 +10,7 @@
 namespace Proyecto.AMaestro.Material {
     
     
-    public partial class Materiales {
-        
-        /// <summary>
-        /// Programar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Programar;
-        
-        /// <summary>
-        /// Borrar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Borrar;
+    public partial class BorrarMaterial {
         
         /// <summary>
         /// lista_material control.
@@ -40,12 +22,12 @@ namespace Proyecto.AMaestro.Material {
         protected global::System.Web.UI.WebControls.DropDownList lista_material;
         
         /// <summary>
-        /// Descargar control.
+        /// bt_borrar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Descargar;
+        protected global::System.Web.UI.WebControls.Button bt_borrar;
     }
 }

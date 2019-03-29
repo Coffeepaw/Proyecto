@@ -132,8 +132,14 @@
     <Content Include="AMaestro\BorrarPublicacion.aspx" />
     <Content Include="AMaestro\CrearActividad.aspx" />
     <Content Include="AMaestro\CrearPublicacion.aspx" />
+    <Content Include="AMaestro\Examen\CrearExamen.aspx" />
+    <Content Include="AMaestro\Examen\Examenes.aspx" />
+    <Content Include="AMaestro\Material\BorrarMaterial.aspx" />
+    <Content Include="AMaestro\Material\CrearMaterial.aspx" />
     <Content Include="AMaestro\Material\Materiales.aspx" />
     <Content Include="AMaestro\Mindex.aspx" />
+    <Content Include="AMaestro\Pregunta\AgregarPreguntas.aspx" />
+    <Content Include="AMaestro\Pregunta\Preguntas.aspx" />
     <Content Include="AMaestro\Publicaciones.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -319,12 +325,40 @@
     <Compile Include="AMaestro\CrearPublicacion.aspx.designer.cs">
       <DependentUpon>CrearPublicacion.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AMaestro\Examen\CrearExamen.aspx.cs">
+      <DependentUpon>CrearExamen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AMaestro\Examen\CrearExamen.aspx.designer.cs">
+      <DependentUpon>CrearExamen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AMaestro\Examen\Examenes.aspx.cs">
+      <DependentUpon>Examenes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AMaestro\Examen\Examenes.aspx.designer.cs">
+      <DependentUpon>Examenes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AMaestro\Maestro.Master.cs">
       <DependentUpon>Maestro.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AMaestro\Maestro.Master.designer.cs">
       <DependentUpon>Maestro.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AMaestro\Material\BorrarMaterial.aspx.cs">
+      <DependentUpon>BorrarMaterial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AMaestro\Material\BorrarMaterial.aspx.designer.cs">
+      <DependentUpon>BorrarMaterial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AMaestro\Material\CrearMaterial.aspx.cs">
+      <DependentUpon>CrearMaterial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AMaestro\Material\CrearMaterial.aspx.designer.cs">
+      <DependentUpon>CrearMaterial.aspx</DependentUpon>
     </Compile>
     <Compile Include="AMaestro\Material\Materiales.aspx.cs">
       <DependentUpon>Materiales.aspx</DependentUpon>
@@ -339,6 +373,20 @@
     </Compile>
     <Compile Include="AMaestro\Mindex.aspx.designer.cs">
       <DependentUpon>Mindex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AMaestro\Pregunta\AgregarPreguntas.aspx.cs">
+      <DependentUpon>AgregarPreguntas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AMaestro\Pregunta\AgregarPreguntas.aspx.designer.cs">
+      <DependentUpon>AgregarPreguntas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AMaestro\Pregunta\Preguntas.aspx.cs">
+      <DependentUpon>Preguntas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AMaestro\Pregunta\Preguntas.aspx.designer.cs">
+      <DependentUpon>Preguntas.aspx</DependentUpon>
     </Compile>
     <Compile Include="AMaestro\Publicaciones.aspx.cs">
       <DependentUpon>Publicaciones.aspx</DependentUpon>

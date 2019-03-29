@@ -14,12 +14,12 @@
             <td>Fecha</td>
             <td>Tipo</td>
         </tr>
-            <%= act.Fecha %>
+         <%foreach(var act in publicaciones) {%>
         <tr>
-           <td><%= act.Id_tipo %></td>
-           <td><% } %></td>
-           <td><%= act.Id_tipo %></td>
-           <td><% } %></td>
+           <td><%= act.Id_publicacion %></td>
+           <td><%= act.Titulo %></td>
+            <td><%= act.Descripcion %></td>
+            <td><%= act.Fecha %></td>
            <td><%= act.Id_tipo %></td>
         </tr>
         <% } %>

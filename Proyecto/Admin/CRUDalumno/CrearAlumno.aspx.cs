@@ -20,9 +20,11 @@ namespace Proyecto.Admin.CRUDalumno
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //tb_fechanac.Text = DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss tt");
-            
+            if (!IsPostBack)
+            {
+                tb_fechanac.Text = DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss tt");
 
+            }
         }
 
         protected void crear_Click(object sender, EventArgs e)

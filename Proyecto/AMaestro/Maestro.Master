@@ -54,6 +54,7 @@
                         <li><a runat="server" href="http://localhost:60542/AMaestro/Publicaciones.aspx">Publicaciones</a></li>
                         <li><a runat="server" href="http://localhost:60542/AMaestro/Material/Materiales.aspx">Material de Apoyo</a></li>
                         <li><a runat="server" href="http://localhost:60542/AMaestro/Actividades.aspx">Actividades</a></li>
+                        <li><a runat="server" href="http://localhost:60542/AMaestro/Examen/Examenes.aspx">Examen</a></li>
                         <li><a runat="server" href="http://localhost:60542/Default">LogOut</a></li>
                     </ul>
                 </div>
