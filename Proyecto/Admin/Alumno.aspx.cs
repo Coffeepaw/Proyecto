@@ -21,5 +21,11 @@ namespace Proyecto.Admin
             Response.Redirect("http://localhost:60542/Admin/CRUDalumno/CrearAlumno.aspx");
 
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("http://localhost:60542/Admin/CRUDalumno/EliminarAlumno.aspx");
+
+        }
     }
 }

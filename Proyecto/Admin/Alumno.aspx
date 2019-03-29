@@ -15,7 +15,7 @@
         </tr>
         <tr>
             <td>
-                <asp:Button ID="Button2" runat="server" Text="Button" />
+                <asp:Button ID="Button2" runat="server" Text="Eliminar Alumno" OnClick="Button2_Click" />
             </td>
         </tr>
         <tr>

@@ -118,7 +118,10 @@
     <Content Include="About.aspx" />
     <Content Include="Admin\Aindex.aspx" />
     <Content Include="Admin\Alumno.aspx" />
+    <Content Include="Admin\CRUDalumno\AsignarCarrera.aspx" />
     <Content Include="Admin\CRUDalumno\CrearAlumno.aspx" />
+    <Content Include="Admin\CRUDalumno\EliminarAlumno.aspx" />
+    <Content Include="Admin\CRUDCarrera\CrearCarrera.aspx" />
     <Content Include="Admin\CRUDmaestro\CrearMaestro.aspx" />
     <Content Include="Admin\CRUDmaestro\EliminarMaestro.aspx" />
     <Content Include="Admin\Maestro.aspx" />
@@ -211,12 +214,33 @@
     <Compile Include="Admin\Alumno.aspx.designer.cs">
       <DependentUpon>Alumno.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\CRUDalumno\AsignarCarrera.aspx.cs">
+      <DependentUpon>AsignarCarrera.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CRUDalumno\AsignarCarrera.aspx.designer.cs">
+      <DependentUpon>AsignarCarrera.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\CRUDalumno\CrearAlumno.aspx.cs">
       <DependentUpon>CrearAlumno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\CRUDalumno\CrearAlumno.aspx.designer.cs">
       <DependentUpon>CrearAlumno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CRUDalumno\EliminarAlumno.aspx.cs">
+      <DependentUpon>EliminarAlumno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CRUDalumno\EliminarAlumno.aspx.designer.cs">
+      <DependentUpon>EliminarAlumno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CRUDCarrera\CrearCarrera.aspx.cs">
+      <DependentUpon>CrearCarrera.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CRUDCarrera\CrearCarrera.aspx.designer.cs">
+      <DependentUpon>CrearCarrera.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\CRUDmaestro\CrearMaestro.aspx.cs">
       <DependentUpon>CrearMaestro.aspx</DependentUpon>
