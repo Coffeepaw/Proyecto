@@ -5,6 +5,12 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
+using System.Net;
+using System.Text;
+
+
+
 using System.IO;
 using System.Data;
 
@@ -17,16 +23,11 @@ using System.Net;
 using System.Text;
 
 
-namespace Proyecto.Admin.CRUDalumno
+namespace Proyecto.Admin
 {
-    public partial class CargarArchivos : System.Web.UI.Page
+    public partial class CargarMaestros : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnImport_Click(object sender, EventArgs e)
         {
 
         }
@@ -34,11 +35,8 @@ namespace Proyecto.Admin.CRUDalumno
         protected void ReadCSV(object sender, EventArgs e)
         {
 
-
-            String Valor1=null, Valor2 = null, Valor3 = null, Valor4 = null, Valor5 = null,
-                            Valor6 = null, Valor7 = null, Valor8 = null, Valor9 = null, Valor10 = null;
-
-
+            String Nombres = null, Telefono = null, Direccion = null, Mail = null, fechanac = null,
+                DPI = null, foto = null, pass = null;
 
             //Upload and save the file
             string csvPath = Server.MapPath("~/Files/") + Path.GetFileName(FileUpload1.PostedFile.FileName);
@@ -46,15 +44,15 @@ namespace Proyecto.Admin.CRUDalumno
 
             //Create a DataTable.
             DataTable dt = new DataTable();
-            dt.Columns.AddRange(new DataColumn[10] { new DataColumn("Nombre", typeof(string)),
+            dt.Columns.AddRange(new DataColumn[8] { new DataColumn("Nombres", typeof(string)),
 
-                new DataColumn("Apellido", typeof(string)),
+                
                 new DataColumn("Telefono", typeof(string)),
-                new DataColumn("TelefonoTutor", typeof(string)),
+                
                 new DataColumn("Direccion", typeof(string)),
                 new DataColumn("CorreoElectronico", typeof(string)),
                 new DataColumn("FechaNacimiento", typeof(string)),
-                new DataColumn("PartidaNac", typeof(string)),
+                new DataColumn("DPI", typeof(string)),
                 new DataColumn("Fotografia", typeof(string)),
                 new DataColumn("Password",typeof(string)) });
 
@@ -65,16 +63,14 @@ namespace Proyecto.Admin.CRUDalumno
             foreach (string row in csvData.Split('\n'))
             {
 
-                Valor1 = null;
-                Valor2 = null;
-                Valor3 = null;
-                Valor4 = null;
-                Valor5 = null;
-                Valor6 = null;
-                Valor7 = null;
-                Valor8 = null;
-                Valor9 = null;
-                Valor10 = null;
+                Nombres = null;
+                Telefono = null;
+                Direccion = null;
+                Mail = null;
+                fechanac = null;
+                DPI = null;
+                foto = null;
+                pass = null;
 
                 if (!string.IsNullOrEmpty(row))
                 {
@@ -92,71 +88,72 @@ namespace Proyecto.Admin.CRUDalumno
 
                         if (i == 0)
                         {
-                            Valor1 = cell;
-                            dt.Rows[dt.Rows.Count - 1][0] = Valor1;
+                            Nombres = cell;
+                            dt.Rows[dt.Rows.Count - 1][0] = Nombres;
 
                         }
                         else if (i == 1)
                         {
-                            Valor2= cell;
-                            dt.Rows[dt.Rows.Count - 1][1] = Valor2;
+                            Telefono = cell;
+                            dt.Rows[dt.Rows.Count - 1][1] = Telefono;
                         }
                         else if (i == 2)
                         {
-                            Valor3 = cell;
-                            dt.Rows[dt.Rows.Count - 1][2] = Valor3;
+                            Direccion = cell;
+                            dt.Rows[dt.Rows.Count - 1][2] = Direccion;
 
                         }
                         else if (i == 3)
                         {
-                            Valor4 = cell;
-                            dt.Rows[dt.Rows.Count - 1][3] = Valor4;
+                            Mail = cell;
+                            dt.Rows[dt.Rows.Count - 1][3] = Mail;
                         }
                         else if (i == 4)
                         {
-                            Valor5 = cell;
-                            dt.Rows[dt.Rows.Count - 1][4] = Valor5;
+                            fechanac = cell;
+                            dt.Rows[dt.Rows.Count - 1][4] = fechanac;
                         }
                         else if (i == 5)
                         {
-                            Valor6 = cell;
-                            dt.Rows[dt.Rows.Count - 1][5] = Valor6;
+                            DPI = cell;
+                            dt.Rows[dt.Rows.Count - 1][5] = DPI;
                         }
                         else if (i == 6)
                         {
-                            Valor7 = cell;
-                            dt.Rows[dt.Rows.Count - 1][6] = Valor7;
+                            foto = cell;
+                            dt.Rows[dt.Rows.Count - 1][6] = foto;
                         }
                         else if (i == 7)
                         {
-                            Valor8 = cell;
-                            dt.Rows[dt.Rows.Count - 1][7] = Valor8;
+                            pass = cell;
+                            dt.Rows[dt.Rows.Count - 1][7] = pass;
                         }
-                        else if (i == 8)
-                        {
-                            Valor9 = cell;
-                            dt.Rows[dt.Rows.Count - 1][8] = Valor9;
-                        }
-                        else if (i == 9)
-                        {
-                            Valor10 = cell;
-                            dt.Rows[dt.Rows.Count - 1][9] = Valor10;
-                        }
+                        //else if (i == 8)
+                        //{
+                        //    Valor9 = cell;
+                        //    dt.Rows[dt.Rows.Count - 1][8] = Valor9;
+                        //}
+                        //else if (i == 9)
+                        //{
+                        //    Valor10 = cell;
+                        //    dt.Rows[dt.Rows.Count - 1][9] = Valor10;
+                        //}
 
                         //Valor1.ToString();
                         //String v = Valor1;
 
-                        
-                        
+
+
                         i++;
 
-                        
+
                     }
 
-                    
+
                 }
 
-                Crear_Alumno(Valor1, Valor2, Valor3, Valor4, Valor5, Valor6, Valor7, Valor8, Valor9, Valor10);
+                //Crear_Alumno(Valor1, Valor2, Valor3, Valor4, Valor5, Valor6, Valor7, Valor8, Valor9, Valor10);
+                Crear_Maestro(Nombres, Telefono, Direccion, Mail, fechanac, pass, DPI);
             }
 
             //Bind the DataTable.
@@ -166,25 +163,26 @@ namespace Proyecto.Admin.CRUDalumno
         }
 
 
-        public void Crear_Alumno(String nombre1, String apellido2, String telefono3, String telefonotutor4, String direccion5, String correo6, String fechanac7, String password8, String PartidaNac9, String Foto)
+        private void Crear_Maestro(String nombres1, String telefono2, String direccion3, String correo4, String fecha_nac5, String password6, String dpi7)
         {
 
-            String serviceurl = string.Format("http://bd1-p1.azurewebsites.net/api/Alumno");
-            Alumno alumnoJSON = new Alumno
+            DateTime oDate = Convert.ToDateTime(fecha_nac5);
+
+            String serviceurl = string.Format("http://bd1-p1.azurewebsites.net/api/Maestro");
+            MaestroC maestroJSON = new MaestroC
             {
-                Nombre = nombre1,
-                Apellido = apellido2,
-                Telefono = telefono3,
-                Tel_tutor = telefonotutor4,
-                Direccion = direccion5,
-                Correo = correo6,
-                Fecha_nacimiento = fechanac7,
-                Password = password8,
-                Partida_nacimiento = PartidaNac9,
-                Carnet = 0
+                Nombres = nombres1,
+                Telefono = telefono2,
+                Direccion = direccion3,
+                Correo = correo4,
 
+                Fecha_nacimiento = fecha_nac5,
+                Password = password6,
+                Dpi = dpi7,
+                Ciclo = "2019",
+                Admin = Session["name"].ToString(),
+                Id_maestro = 0
             };
-
 
             HttpWebRequest request = WebRequest.Create(serviceurl) as HttpWebRequest;
             //Configurar las propiedad del objeto de llamada
@@ -192,7 +190,7 @@ namespace Proyecto.Admin.CRUDalumno
             request.ContentType = "application/json";
 
             //Serializar el objeto a enviar. Para esto uso la libreria Newtonsoft
-            string sb = JsonConvert.SerializeObject(alumnoJSON);
+            string sb = JsonConvert.SerializeObject(maestroJSON);
 
             //Convertir el objeto serializado a arreglo de byte
             Byte[] bt = Encoding.UTF8.GetBytes(sb);
@@ -209,25 +207,24 @@ namespace Proyecto.Admin.CRUDalumno
                 string strsb = sr.ReadToEnd();
                 System.Diagnostics.Debug.WriteLine(strsb);
             }
-
         }
 
 
 
-        public class Alumno
+        public class MaestroC
         {
-            public string Nombre { get; set; }
-            public string Apellido { get; set; }
+            public string Nombres { get; set; }
             public string Telefono { get; set; }
-            public string Tel_tutor { get; set; }
             public string Direccion { get; set; }
             public string Correo { get; set; }
             public string Fecha_nacimiento { get; set; }
             public string Password { get; set; }
-            public string Partida_nacimiento { get; set; }
-            public int Carnet { get; set; }
+            public string Dpi { get; set; }
+            public string Foto { get; set; }
+            public string Ciclo { get; set; }
+            public string Admin { get; set; }
+            public int Id_maestro { get; set; }
         }
 
     }
-
 }

@@ -25,16 +25,14 @@
         </tr>
 
              
-        
-        <% foreach(var act in examenes) { %>
+        <% foreach(var act in examenes){ %>
         <tr>
             <td><%= act.Id_AE %></td>
-            <td><%= act.Id_examen %></td>
-            <td><%= act.Titulo %></td>  
+            <td><%= act.Id_examen%></td>
+            <td><%= act.Titulo %></td>
             <td><%= act.Descripcion %></td>
             <td><%= act.Nombre %></td>
             <td><%= act.Nota %></td>
-   
         </tr>
         <% } %>
     </table>
@@ -53,6 +51,23 @@
     </table>
     <p>
     </p>
+    <p>
+    </p>
+    <table class="nav-justified">
+        <tr>
+            <td>Examen que desea realizar</td>
+            <td>
+                <asp:DropDownList ID="lista_examen" runat="server">
+                </asp:DropDownList>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <asp:Button ID="responder" runat="server" OnClick="responder_Click" Text="Realizar Examen" />
+            </td>
+        </tr>
+    </table>
 
 
 </asp:Content>

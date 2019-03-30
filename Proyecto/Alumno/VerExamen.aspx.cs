@@ -61,10 +61,10 @@ namespace Proyecto.Alumno
                 }
                 response.Close();
                 readStream.Close();
-                //EscogerTarea.DataSource = examenes;
-                //EscogerTarea.DataTextField = "Titulo";
-                //EscogerTarea.DataValueField = "Id_actividad";
-                //EscogerTarea.DataBind();
+                lista_examen.DataSource = examenes;
+                lista_examen.DataTextField = "Titulo";
+                lista_examen.DataValueField = "Id_examen";
+                lista_examen.DataBind();
             }
 
 
@@ -72,7 +72,7 @@ namespace Proyecto.Alumno
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
 
@@ -86,5 +86,22 @@ namespace Proyecto.Alumno
             public double Nota { get; set; }
         }
 
+        protected void responder_Click(object sender, EventArgs e)
+        {
+            String escogidoidexamen = lista_examen.SelectedItem.Value;
+            String escogidoid_ae = "";
+            foreach (Examen examen in examenes)
+            {
+
+                if (examen.Id_examen.Equals(escogidoidexamen))
+                {
+                    escogidoid_ae = examen.Id_AE.ToString();
+                }
+
+            }
+            Session["id_examen"] = escogidoidexamen;
+            Session["id_ae"] = escogidoidexamen;
+            Response.Redirect("http://localhost:60542/Alumno/Examen/ResponderExamen.aspx");
+        }
     }
 }

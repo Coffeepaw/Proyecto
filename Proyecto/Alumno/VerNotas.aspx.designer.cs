@@ -7,36 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Proyecto.Admin {
+namespace Proyecto.Alumno {
     
     
-    public partial class Maestro {
+    public partial class VerNotas {
         
         /// <summary>
-        /// bt_create control.
+        /// tb_materia control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button bt_create;
+        protected global::System.Web.UI.WebControls.TextBox tb_materia;
         
         /// <summary>
-        /// Eliminar control.
+        /// bt_ver control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Eliminar;
-        
-        /// <summary>
-        /// Cargar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Cargar;
+        protected global::System.Web.UI.WebControls.Button bt_ver;
     }
 }

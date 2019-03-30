@@ -54,6 +54,7 @@
                         <li><a runat="server" href="http://localhost:60542/Alumno/VerActividades.aspx">Ver Actividades</a></li>
                         <li><a runat="server" href="http://localhost:60542/Alumno/Notificacion.aspx">Notificaciones</a></li>
                         <li><a runat="server" href="http://localhost:60542/Alumno/VerExamen.aspx">Examenes</a></li>
+                        <li><a runat="server" href="http://localhost:60542/Alumno/VerNotas.aspx">Notas</a></li>
                         <li><a runat="server" href="http://localhost:60542/Default">LogOut</a></li>
                     </ul>
                 </div>

@@ -20,7 +20,8 @@
         </tr>
         <tr>
             <td>
-                &nbsp;</td>
+                <asp:Button ID="cargar" runat="server" OnClick="cargar_Click" Text="Cargar CSV alumnos" />
+            </td>
         </tr>
         <tr>
             <td>

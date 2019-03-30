@@ -16,17 +16,18 @@
             <td><strong>Dpi</strong></td>
             <td><strong>Ciclo</strong></td>
         </tr>
-        <% foreach(var maestro in maestros) { %>
+        <%foreach(var maestro in maestros) {%>
         <tr>
             <td><%= maestro.Id_maestro %></td>
             <td><%= maestro.Nombres %></td>
             <td><%= maestro.Telefono %></td>
             <td><%= maestro.Direccion %></td>
             <td><%= maestro.Correo %></td>
-            <td><%= maestro.Fecha_nacimiento %></td>
+            <td><%= maestro.Fecha_nacimiento%></td>  
             <td><%= maestro.Password%></td>
-            <td><%= maestro.Dpi %></td>     
-            <td><%= maestro.Ciclo %></td>      
+            <td><%= maestro.Dpi %></td>
+            <td><%= maestro.Ciclo %></td>   
+                
         </tr>
         <% } %>
     </table>
@@ -46,7 +47,8 @@
         </tr>
         <tr>
             <td>
-                &nbsp;</td>
+                <asp:Button ID="Cargar" runat="server" Text="Cargar CSV Maestros" OnClick="Crear_Click" />
+            </td>
         </tr>
         <tr>
             <td>

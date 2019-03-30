@@ -10,33 +10,33 @@
 namespace Proyecto.Admin {
     
     
-    public partial class Maestro {
+    public partial class CargarMaestros {
         
         /// <summary>
-        /// bt_create control.
+        /// FileUpload1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button bt_create;
+        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
         
         /// <summary>
-        /// Eliminar control.
+        /// btnRead control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Eliminar;
+        protected global::System.Web.UI.WebControls.Button btnRead;
         
         /// <summary>
-        /// Cargar control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Cargar;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

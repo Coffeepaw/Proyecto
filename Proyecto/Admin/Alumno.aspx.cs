@@ -27,5 +27,10 @@ namespace Proyecto.Admin
             Response.Redirect("http://localhost:60542/Admin/CRUDalumno/EliminarAlumno.aspx");
 
         }
+
+        protected void cargar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("http://localhost:60542/Admin/CRUDalumno/CargarArchivos.aspx");
+        }
     }
 }

@@ -71,6 +71,11 @@ namespace Proyecto.Admin
             Response.Redirect("http://localhost:60542/Admin/CRUDmaestro/EliminarMaestro.aspx");
         }
 
+        protected void Crear_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("http://localhost:60542/Admin/CRUDmaestro/CargarMaestros.aspx");
+        }
+
         public class MaestroO
         {
             public string Nombres { get; set; }

@@ -7,36 +7,45 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Proyecto.Admin {
+namespace Proyecto.Alumno.Examen {
     
     
-    public partial class Maestro {
+    public partial class ResponderExamen {
         
         /// <summary>
-        /// bt_create control.
+        /// lb_avisonota control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button bt_create;
+        protected global::System.Web.UI.WebControls.Label lb_avisonota;
         
         /// <summary>
-        /// Eliminar control.
+        /// tb_pregunta control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Eliminar;
+        protected global::System.Web.UI.WebControls.TextBox tb_pregunta;
         
         /// <summary>
-        /// Cargar control.
+        /// lista_respuestas control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Cargar;
+        protected global::System.Web.UI.WebControls.CheckBoxList lista_respuestas;
+        
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }
