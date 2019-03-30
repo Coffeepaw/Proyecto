@@ -16,7 +16,8 @@ namespace Proyecto.AMaestro.Pregunta
 
         protected void Agregar_Click(object sender, EventArgs e)
         {
-
+            Session["respuestas"] = "";
+            Response.Redirect("http://localhost:60542/AMaestro/Pregunta/AgregarPreguntas.aspx");
         }
     }
 }

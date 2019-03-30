@@ -77,7 +77,7 @@ namespace Proyecto.AMaestro.Examen
         protected void Preguntas_Click(object sender, EventArgs e)
         {
             Session["examen"] = lista_examen.SelectedItem.Value;
-            Response.Redirect("http://localhost:60542/AMaestro/Examen/CrearExamen.aspx");
+            Response.Redirect("http://localhost:60542/AMaestro/Pregunta/Preguntas.aspx");
         }
 
         public class Examen

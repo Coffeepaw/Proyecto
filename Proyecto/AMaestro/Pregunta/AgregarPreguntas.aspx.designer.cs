@@ -13,21 +13,57 @@ namespace Proyecto.AMaestro.Pregunta {
     public partial class AgregarPreguntas {
         
         /// <summary>
-        /// Siguiente control.
+        /// tb_descripcion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Siguiente;
+        protected global::System.Web.UI.WebControls.TextBox tb_descripcion;
         
         /// <summary>
-        /// Guardar control.
+        /// tb_opcion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Guardar;
+        protected global::System.Web.UI.WebControls.TextBox tb_opcion;
+        
+        /// <summary>
+        /// tb_estado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_estado;
+        
+        /// <summary>
+        /// tb_respuesta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_respuesta;
+        
+        /// <summary>
+        /// AgregarRespuesta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AgregarRespuesta;
+        
+        /// <summary>
+        /// GuardarPregunta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button GuardarPregunta;
     }
 }

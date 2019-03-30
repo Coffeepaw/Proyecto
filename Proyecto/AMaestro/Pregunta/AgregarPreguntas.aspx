@@ -2,29 +2,59 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
         <br />
-        <strong>AGREGAR PREGUNTAS</strong></h1>
+        CREAR PREGUNTA</h1>
     <p>
     </p>
-    <p>
-    </p>
-    <p>
-    </p>
-    <p>
-    </p>
+    <table class="nav-justified">
+        <tr>
+            <td class="modal-sm" style="width: 309px">DESCRIPCION</td>
+            <td>
+                <asp:TextBox ID="tb_descripcion" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="modal-sm" style="width: 309px; text-align: right; font-size: large">RESPUESTA</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="modal-sm" style="width: 309px">OPCION</td>
+            <td>
+                <asp:TextBox ID="tb_opcion" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="modal-sm" style="width: 309px">ESTADO</td>
+            <td>
+                <asp:TextBox ID="tb_estado" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="modal-sm" style="width: 309px">RESPUESTA</td>
+            <td>
+                <asp:TextBox ID="tb_respuesta" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+    </table>
     <p>
     </p>
     <table class="nav-justified">
         <tr>
             <td>
-                <asp:Button ID="Siguiente" runat="server" OnClick="Siguiente_Click" Text="Siguiente Respuesta" />
+                <asp:Button ID="AgregarRespuesta" runat="server"  OnClick="Respuesta_Click"  Text="Siguiente Respuesta"  />
             </td>
         </tr>
         <tr>
             <td>
-                <asp:Button ID="Guardar" runat="server" OnClick="Guardar_Click" Text="Guardar Preguntas" />
+                <asp:Button ID="GuardarPregunta" runat="server" OnClick="GuardarPregunta_Click" Text="Guardar Pregunta" />
             </td>
         </tr>
     </table>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
     <p>
     </p>
 </asp:Content>
