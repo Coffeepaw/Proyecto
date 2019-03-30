@@ -127,7 +127,9 @@
     <Content Include="Admin\CRUDmaestro\EliminarMaestro.aspx" />
     <Content Include="Admin\Maestro.aspx" />
     <Content Include="Alumno\Alindex.aspx" />
+    <Content Include="Alumno\Notificacion.aspx" />
     <Content Include="Alumno\VerActividades.aspx" />
+    <Content Include="Alumno\VerExamen.aspx" />
     <Content Include="AMaestro\Actividades.aspx" />
     <Content Include="AMaestro\BorrarActividad.aspx" />
     <Content Include="AMaestro\BorrarPublicacion.aspx" />
@@ -292,12 +294,26 @@
     <Compile Include="Alumno\Alumno.Master.designer.cs">
       <DependentUpon>Alumno.Master</DependentUpon>
     </Compile>
+    <Compile Include="Alumno\Notificacion.aspx.cs">
+      <DependentUpon>Notificacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alumno\Notificacion.aspx.designer.cs">
+      <DependentUpon>Notificacion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Alumno\VerActividades.aspx.cs">
       <DependentUpon>VerActividades.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Alumno\VerActividades.aspx.designer.cs">
       <DependentUpon>VerActividades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\VerExamen.aspx.cs">
+      <DependentUpon>VerExamen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alumno\VerExamen.aspx.designer.cs">
+      <DependentUpon>VerExamen.aspx</DependentUpon>
     </Compile>
     <Compile Include="AMaestro\Actividades.aspx.cs">
       <DependentUpon>Actividades.aspx</DependentUpon>
