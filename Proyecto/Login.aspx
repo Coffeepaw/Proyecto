@@ -39,9 +39,9 @@
                 Tipo</td>
             <td class="text-center" style="height: 48px; text-align: center;">
                 <asp:DropDownList ID="Login_type" runat="server" Height="26px" OnSelectedIndexChanged="Login_type_SelectedIndexChanged" Width="123px">
-                    <asp:ListItem Selected="True">1</asp:ListItem>
-                    <asp:ListItem>2</asp:ListItem>
-                    <asp:ListItem>3</asp:ListItem>
+                    <asp:ListItem Selected="True">Administrador</asp:ListItem>
+                    <asp:ListItem>Maestro</asp:ListItem>
+                    <asp:ListItem>Alumno</asp:ListItem>
                 </asp:DropDownList>
             </td>
             <td class="text-center" style="height: 48px; width: 107px;">
@@ -57,3 +57,4 @@
         </tr>
     </table>
 </asp:Content>
+

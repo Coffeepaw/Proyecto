@@ -24,11 +24,18 @@ namespace Proyecto
         {
             String usuario = Login_user.Text;
             String pass = Login_password.Text;
-            String tipo = Login_type.Text;
+            String tipo = "";
+            if (Login_type.Text.Equals("Administrador"))
+                tipo = "1";
+            else if (Login_type.Text.Equals("Maestro"))
+                tipo = "2";
+            else
+                tipo = "3";
+
             Get_login(usuario, pass, tipo);
         }
         private void Get_login(String user, String password, String type)
-        {          
+        {
             String serviceurl = string.Format("http://bd1-p1.azurewebsites.net/api/Login");
             Userjson userJson = new Userjson
             {
@@ -39,29 +46,29 @@ namespace Proyecto
 
 
             //Declara el objeto con el que haremos la llamada al servicio
-             HttpWebRequest request = WebRequest.Create(serviceurl) as HttpWebRequest;
-             //Configurar las propiedad del objeto de llamada
-             request.Method = "POST";
-             request.ContentType = "application/json";
+            HttpWebRequest request = WebRequest.Create(serviceurl) as HttpWebRequest;
+            //Configurar las propiedad del objeto de llamada
+            request.Method = "POST";
+            request.ContentType = "application/json";
 
-             //Serializar el objeto a enviar. Para esto uso la libreria Newtonsoft
-             string sb = JsonConvert.SerializeObject(userJson);
+            //Serializar el objeto a enviar. Para esto uso la libreria Newtonsoft
+            string sb = JsonConvert.SerializeObject(userJson);
 
-             //Convertir el objeto serializado a arreglo de byte
-             Byte[] bt = Encoding.UTF8.GetBytes(sb);
+            //Convertir el objeto serializado a arreglo de byte
+            Byte[] bt = Encoding.UTF8.GetBytes(sb);
 
-             //Agregar el objeto Byte[] al request
-             Stream st = request.GetRequestStream();
-             st.Write(bt, 0, bt.Length);
-             st.Close();
+            //Agregar el objeto Byte[] al request
+            Stream st = request.GetRequestStream();
+            st.Write(bt, 0, bt.Length);
+            st.Close();
 
-             //Hacer la llamada
-             using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
-             {
-                 //Leer el resultado de la llamada
-                 Stream stream1 = response.GetResponseStream();
-                 StreamReader sr = new StreamReader(stream1);
-                 string strsb = sr.ReadToEnd();
+            //Hacer la llamada
+            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+            {
+                //Leer el resultado de la llamada
+                Stream stream1 = response.GetResponseStream();
+                StreamReader sr = new StreamReader(stream1);
+                string strsb = sr.ReadToEnd();
                 System.Diagnostics.Debug.WriteLine(strsb);
                 if (strsb == "false")
                 {
@@ -75,7 +82,7 @@ namespace Proyecto
                     {
                         Response.Redirect("http://localhost:60542/Alumno/Alindex.aspx");
                     }
-                    else if(type.Equals("2"))
+                    else if (type.Equals("2"))
                     {
                         Response.Redirect("http://localhost:60542/AMAESTRO/Mindex.aspx");
                     }
@@ -85,7 +92,7 @@ namespace Proyecto
                     }
                 }
             }
-            
+
 
 
         }

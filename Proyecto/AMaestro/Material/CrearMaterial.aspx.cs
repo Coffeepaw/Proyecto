@@ -13,14 +13,36 @@ namespace Proyecto.AMaestro.Material
 {
     public partial class CrearMaterial : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
-           // DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss tt");
+            // DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss tt");
         }
 
         protected void Crear_Click(object sender, EventArgs e)
         {
-            Post_material(tb_titulo.Text,tb_descripcion.Text,tb_enlace.Text, tb_materia.Text, DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss tt"));
+            Byte[] Archivo = null;
+            string nombreArchivo = string.Empty;
+            string extensionArchivo = string.Empty;
+            if (fuArchivo.HasFile == true)
+            {
+                using (BinaryReader reader = new
+                BinaryReader(fuArchivo.PostedFile.InputStream))
+                {
+                    Archivo = reader.ReadBytes(fuArchivo.PostedFile.ContentLength);
+                }
+            }
+            string result = Encoding.UTF8.GetString(Archivo, 0, Archivo.Length);
+            string ruta = "C:\\BD1\\Material\\" + Path.GetFileName(fuArchivo.FileName);
+            string ruta2 = Path.GetFileName(fuArchivo.FileName);
+
+            using (Stream file = File.OpenWrite(ruta))
+            {
+                file.Write(Archivo, 0, Archivo.Length); //se agrega información al documento
+                file.Close();
+            }
+
+            Post_material(tb_titulo.Text, tb_descripcion.Text, ruta2, tb_materia.Text, DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss tt"));
         }
 
         private void Post_material(String titulo, String descripcion, String enlace, String materia, String fecha)
@@ -79,5 +101,7 @@ namespace Proyecto.AMaestro.Material
             public int Id_materia { get; set; }
             public int Id_material { get; set; }
         }
+
+
     }
 }

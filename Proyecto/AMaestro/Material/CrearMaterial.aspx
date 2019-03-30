@@ -13,7 +13,7 @@
         <tr>
             <td>Enlace</td>
             <td>
-                <asp:TextBox ID="tb_enlace" runat="server"></asp:TextBox>
+                <asp:FileUpload ID="fuArchivo" runat="server" />
             </td>
         </tr>
         <tr>
@@ -36,3 +36,4 @@
         </tr>
     </table>
 </asp:Content>
+

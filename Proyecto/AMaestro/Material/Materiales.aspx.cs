@@ -9,6 +9,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 namespace Proyecto.AMaestro.Material
 {
     public partial class Materiales : System.Web.UI.Page
@@ -76,9 +77,24 @@ namespace Proyecto.AMaestro.Material
         protected void Descargar_Click1(object sender, EventArgs e)
         {
 
-            
 
-            
+            Material descargar = new Material();
+
+            foreach (Material mat in materiales)
+            {
+                //Console.WriteLine(lista_material.SelectedItem.Value);
+                if (mat.Id_material == Convert.ToInt32(lista_material.SelectedItem.Value))
+                {
+
+                    descargar = mat;
+                    string ruta = "C:\\BD1\\Material\\" + descargar.Enlace;
+                    byte[] bte = File.ReadAllBytes(ruta);
+                    File.WriteAllBytes("C:\\BD1\\Descarga\\" + descargar.Enlace, bte);
+
+                }
+            }
+
+            Response.Redirect("http://localhost:60542/AMaestro/Material/Materiales.aspx");
         }
 
         public class Material

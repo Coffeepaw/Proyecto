@@ -22,13 +22,13 @@ namespace Proyecto.AMaestro.Material {
         protected global::System.Web.UI.WebControls.TextBox tb_titulo;
         
         /// <summary>
-        /// tb_enlace control.
+        /// fuArchivo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_enlace;
+        protected global::System.Web.UI.WebControls.FileUpload fuArchivo;
         
         /// <summary>
         /// tb_descripcion control.
