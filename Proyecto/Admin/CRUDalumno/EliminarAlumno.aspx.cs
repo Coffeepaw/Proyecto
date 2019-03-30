@@ -89,6 +89,8 @@ namespace Proyecto.Admin.CRUDalumno
             StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
             string strsb = readStream.ReadToEnd();
             System.Diagnostics.Debug.WriteLine(strsb);
+
+            Response.Redirect("http://localhost:60542/Admin/Aindex.aspx");
         }
 
         public class Alumno

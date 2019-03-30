@@ -78,8 +78,7 @@ namespace Proyecto.AMaestro.Material
 
             
 
-
-            Response.Redirect("http://localhost:60542/AMaestro/Material/Materiales.aspx");
+            
         }
 
         public class Material

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Alumno/Alumno.Master" AutoEventWireup="true" CodeBehind="AsignarCarrera.aspx.cs" Inherits="Proyecto.Admin.CRUDalumno.AsignarCarrera" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="AsignarCarrera.aspx.cs" Inherits="Proyecto.Admin.CRUDalumno.AsignarCarrera" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <H1>ASIGNAR CARRERAS </H1>

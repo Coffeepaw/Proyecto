@@ -49,6 +49,11 @@
             <asp:Button ID="bt_eliminar" runat="server" OnClick="bt_eliminar_Click" Text="Eliminar Actividad" />
         </td>
     </tr>
+    <tr>
+        <td>
+            <asp:Button ID="Calificar" runat="server" OnClick="Calificar_Click" Text="Calificar Actividad" />
+        </td>
+    </tr>
 </table>
 <p>
     &nbsp;</p>

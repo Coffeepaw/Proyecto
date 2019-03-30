@@ -130,6 +130,7 @@
     <Content Include="AMaestro\Actividades.aspx" />
     <Content Include="AMaestro\BorrarActividad.aspx" />
     <Content Include="AMaestro\BorrarPublicacion.aspx" />
+    <Content Include="AMaestro\Calificacion\CalificacionActividad.aspx" />
     <Content Include="AMaestro\CrearActividad.aspx" />
     <Content Include="AMaestro\CrearPublicacion.aspx" />
     <Content Include="AMaestro\Examen\CrearExamen.aspx" />
@@ -310,6 +311,13 @@
     </Compile>
     <Compile Include="AMaestro\BorrarPublicacion.aspx.designer.cs">
       <DependentUpon>BorrarPublicacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AMaestro\Calificacion\CalificacionActividad.aspx.cs">
+      <DependentUpon>CalificacionActividad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AMaestro\Calificacion\CalificacionActividad.aspx.designer.cs">
+      <DependentUpon>CalificacionActividad.aspx</DependentUpon>
     </Compile>
     <Compile Include="AMaestro\CrearActividad.aspx.cs">
       <DependentUpon>CrearActividad.aspx</DependentUpon>
