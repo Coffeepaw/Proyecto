@@ -119,6 +119,7 @@
     <Content Include="Admin\Aindex.aspx" />
     <Content Include="Admin\Alumno.aspx" />
     <Content Include="Admin\CRUDalumno\AsignarCarrera.aspx" />
+    <Content Include="Admin\CRUDalumno\CargarArchivos.aspx" />
     <Content Include="Admin\CRUDalumno\CrearAlumno.aspx" />
     <Content Include="Admin\CRUDalumno\EliminarAlumno.aspx" />
     <Content Include="Admin\CRUDCarrera\CrearCarrera.aspx" />
@@ -214,6 +215,13 @@
     </Compile>
     <Compile Include="Admin\CRUDalumno\AsignarCarrera.aspx.designer.cs">
       <DependentUpon>AsignarCarrera.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CRUDalumno\CargarArchivos.aspx.cs">
+      <DependentUpon>CargarArchivos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CRUDalumno\CargarArchivos.aspx.designer.cs">
+      <DependentUpon>CargarArchivos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\CRUDalumno\CrearAlumno.aspx.cs">
       <DependentUpon>CrearAlumno.aspx</DependentUpon>
