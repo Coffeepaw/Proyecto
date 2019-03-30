@@ -51,7 +51,7 @@
         </tr>
         <tr>
             <td class="text-center">
-                <asp:FileUpload ID="FileUpload1" runat="server" />
+                <asp:FileUpload ID="fuArchivo" runat="server" />
             </td>
             <td><strong>
                 <asp:Button ID="Button1" runat="server" Text="Subir" OnClick="Button1_Click"  />

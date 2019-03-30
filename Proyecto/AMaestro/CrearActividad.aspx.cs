@@ -73,7 +73,7 @@ namespace Proyecto.AMaestro
                 string strsb = sr.ReadToEnd();
                 System.Diagnostics.Debug.WriteLine(strsb);
 
-                Response.Redirect("http://localhost:60542/AMaestro/Actividades.aspx");
+                Response.Redirect("http://localhost:60542/Alumno/VerActividades.aspx");
             }
         }
 
