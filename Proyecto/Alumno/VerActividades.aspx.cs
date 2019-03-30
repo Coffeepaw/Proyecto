@@ -71,7 +71,67 @@ namespace Proyecto.Alumno
 
         private void Post_tarea(String id)
         {
+            Byte[] Archivo = null;
+            string nombreArchivo = string.Empty;
+            string extensionArchivo = string.Empty;
+            if (fuArchivo.HasFile == true)
+            {
+                using (BinaryReader reader = new
+                BinaryReader(fuArchivo.PostedFile.InputStream))
+                {
+                    Archivo = reader.ReadBytes(fuArchivo.PostedFile.ContentLength);
+                }
+            }
+            string result = Encoding.UTF8.GetString(Archivo, 0, Archivo.Length);
+            string ruta = "C:\\BD1\\Actividades\\" + Path.GetFileName(fuArchivo.FileName);
+            string ruta2 = Path.GetFileName(fuArchivo.FileName);
+
+            using (Stream file = File.OpenWrite(ruta))
+            {
+                file.Write(Archivo, 0, Archivo.Length); //se agrega información al documento
+                file.Close();
+            }
+
             System.Diagnostics.Debug.WriteLine(id);
+
+            String serviceurl = string.Format("http://bd1-p1.azurewebsites.net/api/Actividad/{0}",id);
+            
+            Actividad actividadJSON = new Actividad
+            {
+                Titulo = "",
+                Descripcion = "",
+                Estado = "Entregado",
+                Id_actividad = 1,
+                Nombre = ruta,
+                Nota = 0,
+                Observacion = "",
+                Ponderacion =10,
+            };
+            HttpWebRequest request = WebRequest.Create(serviceurl) as HttpWebRequest;
+            //Configurar las propiedad del objeto de llamada
+            request.Method = "PUT";
+            request.ContentType = "application/json";
+
+            //Serializar el objeto a enviar. Para esto uso la libreria Newtonsoft
+            string sb = JsonConvert.SerializeObject(actividadJSON);
+
+            //Convertir el objeto serializado a arreglo de byte
+            Byte[] bt = Encoding.UTF8.GetBytes(sb);
+
+            //Agregar el objeto Byte[] al request
+            Stream st = request.GetRequestStream();
+            st.Write(bt, 0, bt.Length);
+            st.Close();
+            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+            {
+                //Leer el resultado de la llamada
+                Stream stream1 = response.GetResponseStream();
+                StreamReader sr = new StreamReader(stream1);
+                string strsb = sr.ReadToEnd();
+                System.Diagnostics.Debug.WriteLine("Actualizado "+strsb);
+
+                Response.Redirect("http://localhost:60542/Alumno/VerActividades.aspx");
+            }
         }
 
         public class Actividad
