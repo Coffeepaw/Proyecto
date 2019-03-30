@@ -70,6 +70,11 @@ namespace Proyecto.AMaestro
         {
             Response.Redirect("http://localhost:60542/AMaestro/BorrarActividad.aspx");
         }
+
+        protected void Calificar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("http://localhost:60542/AMaestro/Calificacion/CalificacionActividad.aspx");
+        }
     }
 
     public class Actividad

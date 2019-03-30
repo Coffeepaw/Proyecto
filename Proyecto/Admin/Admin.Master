@@ -53,6 +53,7 @@
                         <li><a runat="server" href="http://localhost:60542/Admin/Aindex.aspx">Home</a></li>
                         <li><a runat="server" href="http://localhost:60542/Admin/Alumno/">Alumno</a></li>
                         <li><a runat="server" href="http://localhost:60542/Admin/Maestro/">Maestro</a></li>
+                        <li><a runat="server" href="http://localhost:60542/Admin/CRUDalumno/AsignarCarrera.aspx">Asignar Carrera</a></li>
                         <li><a runat="server" href="http://localhost:60542/Default">LogOut</a></li>
                     </ul>
                 </div>

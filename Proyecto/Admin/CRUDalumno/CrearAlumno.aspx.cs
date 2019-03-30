@@ -84,6 +84,7 @@ namespace Proyecto.Admin.CRUDalumno
                 StreamReader sr = new StreamReader(stream1);
                 string strsb = sr.ReadToEnd();
                 System.Diagnostics.Debug.WriteLine(strsb);
+                Response.Redirect("http://localhost:60542/Admin/Aindex.aspx");
             }
 
 

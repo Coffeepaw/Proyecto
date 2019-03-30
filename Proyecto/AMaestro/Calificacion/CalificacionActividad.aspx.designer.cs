@@ -7,28 +7,46 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Proyecto.AMaestro {
+namespace Proyecto.AMaestro.Calificacion {
     
     
-    public partial class Actividades {
+    public partial class CalificacionActividad {
         
         /// <summary>
-        /// Btn_crearactividad control.
+        /// tb_estudiante control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btn_crearactividad;
+        protected global::System.Web.UI.WebControls.TextBox tb_estudiante;
         
         /// <summary>
-        /// bt_eliminar control.
+        /// tb_actividad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button bt_eliminar;
+        protected global::System.Web.UI.WebControls.TextBox tb_actividad;
+        
+        /// <summary>
+        /// tb_descripcion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_descripcion;
+        
+        /// <summary>
+        /// tb_nota control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_nota;
         
         /// <summary>
         /// Calificar control.

@@ -20,13 +20,11 @@
         </tr>
         <tr>
             <td>
-                <asp:Button ID="Button3" runat="server" Text="Button" />
-            </td>
+                &nbsp;</td>
         </tr>
         <tr>
             <td>
-                <asp:Button ID="Button4" runat="server" Text="Button" />
-            </td>
+                &nbsp;</td>
         </tr>
     </table>
 </asp:Content>
